@@ -157,6 +157,14 @@ img {
   max-width:100%;
 }
 
+img.circular_image_medium {
+  border: 1px solid lightgrey;
+  border-radius: 10em;
+  max-height: 95%;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
 header {
   width:270px;
   float:left;
