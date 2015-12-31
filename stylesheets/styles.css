@@ -248,6 +248,10 @@ hr {
   margin:0 0 20px;
 }
 
+a.source_link {
+  font-size: small;
+}
+
 footer {
   width:270px;
   float:left;
