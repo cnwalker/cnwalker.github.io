@@ -54,6 +54,7 @@
        url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
 }
 
+
 body {
   background-color: #fff;
   padding:50px;
@@ -110,6 +111,14 @@ a:hover small {
 .wrapper {
   width:860px;
   margin:0 auto;
+}
+
+.job-title {
+    padding-top: 0;
+}
+
+.header-with-title {
+    margin-bottom: 0;
 }
 
 blockquote {
@@ -234,7 +243,7 @@ header ul a strong {
 section {
   width:500px;
   float:right;
-  padding-bottom:50px;
+  padding-bottom:18px;
 }
 
 small {
