@@ -96,6 +96,17 @@
 
             <div class="project">
                 <h2>
+                    <a href="http://eventbrite.github.io/britecharts/">Britecharts</a>
+                    <a class="source_link" href="https://github.com/eventbrite/britecharts/commits?author=cwalker-eb">(contributions)</a>
+                </h2>
+                <p>
+                    Added step chart and improved tests for Britecharts, a charting library by Eventbrite.
+                    Since going open source in early 2017, Britecharts has over 2500 stars and 20 contributors.
+                </p>
+            </div>
+
+            <div class="project">
+                <h2>
                     <a id="openmacro" class="anchor" href="http://openmacro.io/#!/">
                         <span class="octicon octicon-link">Open Macro</span>
                     </a>
@@ -213,10 +224,18 @@
 
   </div>
     <script src="js/scale.fix.js"></script>
+
+    <script>
+        if (window.location.host == "cnwalker.github.io" && window.location.protocol != "https:") {
+          window.location.protocol = "https:"
+        }
+    </script>
+
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
+
     <script type="text/javascript">
       try {
         var pageTracker = _gat._getTracker("UA-71663068-1");
