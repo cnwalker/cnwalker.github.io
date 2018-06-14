@@ -291,7 +291,7 @@ Introduction
   which are co-resident with higher level protocols in the host
   computer.  Some SWEs will be connected to networks via
   front-end computers which house the SSP and internet protocol layers,
-  as well as network specific software.  The TCP specification describes
+  as well as network specific software.  The SSP specification describes
   an interface to the higher level protocols which appears to be
   implementable even for the front-end case, as long as a suitable
   host-to-front end protocol is implemented.
