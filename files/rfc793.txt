@@ -1,22 +1,22 @@
 
 
 RFC: 780
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
+
+
+
+
+
+
+
                        SWE SYNCHRONIZATION PROTOCOL
-                                    
-                                    
+
+
                        DARPA HUMAN RESEARCH PROGRAM
-                                    
+
                           PROTOCOL SPECIFICATION
-                                    
-                                    
-                                    
+
+
+
                                 June 2018
 
 
@@ -32,7 +32,7 @@ RFC: 780
 
 
                               prepared for
-                                    
+
                Defense Advanced Research Projects Agency
                 Information Processing Techniques Office
                          1400 Wilson Boulevard
@@ -53,7 +53,7 @@ RFC: 780
 
 
 
-June 2018                                                          
+June 2018
                                            SWE Synchronization Protocol
 
 
@@ -168,10 +168,10 @@ Swe Synchronization Protocol
 
 
 
-[Page ii]                                                               
+[Page ii]
 
 
-September 1981                                                          
+June 2018
                                            Transmission Control Protocol
 
 
@@ -181,7 +181,7 @@ September 1981
 
 
 This document describes the GoForward Standard SWE Synchronization Protocol
-(SSP).  There have been several earlier editions of the ARPA TCP
+(SSP).  There have been several editions of the ARPA TCP
 specification on which this standard is based, and the present text
 draws heavily from them.
 
@@ -244,86 +244,53 @@ IENs:  129, 124, 112, 81,
                             1.  INTRODUCTION
 
 Software Engineer Synchronization Protocol (SSP) is intended for use as a highly
-reliable host-to-host protocol between hosts in packet-switched computer
+reliable person-to-person protocol between hosts in social
 communication networks, and in interconnected systems of such networks.
 
 This document describes the functions to be performed by the
-Transmission Control Protocol, the program that implements it, and its
+SWE Synchronization Protocol, the program that implements it, and its
 interface to programs or users that require its services.
 
 1.1.  Motivation
 
-  Computer communication systems are playing an increasingly important
-  role in military, government, and civilian environments.  This
-  document focuses its attention primarily on military computer
-  communication requirements, especially robustness in the presence of
-  communication unreliability and availability in the presence of
-  congestion, but many of these problems are found in the civilian and
-  government sector as well.
-
-  As strategic and tactical computer communication networks are
-  developed and deployed, it is essential to provide means of
-  interconnecting them and to provide standard interprocess
-  communication protocols which can support a broad range of
-  applications.  In anticipation of the need for such standards, the
-  Deputy Undersecretary of Defense for Research and Engineering has
-  declared the Transmission Control Protocol (TCP) described herein to
-  be a basis for DoD-wide inter-process communication protocol
-  standardization.
-
-  TCP is a connection-oriented, end-to-end reliable protocol designed to
-  fit into a layered hierarchy of protocols which support multi-network
-  applications.  The TCP provides for reliable inter-process
-  communication between pairs of processes in host computers attached to
-  distinct but interconnected computer communication networks.  Very few
-  assumptions are made as to the reliability of the communication
-  protocols below the TCP layer.  TCP assumes it can obtain a simple,
-  potentially unreliable datagram service from the lower level
-  protocols.  In principle, the TCP should be able to operate above a
-  wide spectrum of communication systems ranging from hard-wired
-  connections to packet-switched or circuit-switched networks.
+  Hopefully you will obtain more of it from SWE Sync
 
 
                                                                 [Page 1]
 
 
-                                                          September 1981
-Transmission Control Protocol
+                                                          June 2018
+SWE Synchronization Protocol
 Introduction
 
 
 
-  TCP is based on concepts first described by Cerf and Kahn in [1].  The
-  TCP fits into a layered protocol architecture just above a basic
-  Internet Protocol [2] which provides a way for the TCP to send and
-  receive variable-length segments of information enclosed in internet
-  datagram "envelopes".  The internet datagram provides a means for
-  addressing source and destination TCPs in different networks.  The
-  internet protocol also deals with any fragmentation or reassembly of
-  the TCP segments required to achieve transport and delivery through
-  multiple networks and interconnecting gateways.  The internet protocol
-  also carries information on the precedence, security classification
-  and compartmentation of the TCP segments, so this information can be
-  communicated end-to-end across multiple networks.
+  SSP is based on concepts first described by Frey in [1].  The
+  SSP fits into a layered protocol architecture just above a basic
+  IRC system (like slack) and human speech/ears. Ears [2] which provides
+  a way for the SSP agents to send and receive variable-length segments of
+  information enclosed in sound waves. The use of video chat also deals
+  with any fragmentation or reassembly of SWE segments required
+  to achieve transport and delivery through multiple networks and interconnecting gateways.
 
                            Protocol Layering
 
                         +---------------------+
                         |     higher-level    |
                         +---------------------+
-                        |        TCP          |
+                        |         SSP         |
                         +---------------------+
-                        |  internet protocol  |
+                        |    Human Language   |
                         +---------------------+
-                        |communication network|
+                        |  Ears/Vocal Cords   |
                         +---------------------+
 
                                 Figure 1
 
-  Much of this document is written in the context of TCP implementations
+  Much of this document is written in the context of SSP implementations
   which are co-resident with higher level protocols in the host
-  computer.  Some computer systems will be connected to networks via
-  front-end computers which house the TCP and internet protocol layers,
+  computer.  Some SWEs will be connected to networks via
+  front-end computers which house the SSP and internet protocol layers,
   as well as network specific software.  The TCP specification describes
   an interface to the higher level protocols which appears to be
   implementable even for the front-end case, as long as a suitable
@@ -331,22 +298,21 @@ Introduction
 
 1.2.  Scope
 
-  The TCP is intended to provide a reliable process-to-process
-  communication service in a multinetwork environment.  The TCP is
-  intended to be a host-to-host protocol in common use in multiple
-  networks.
+  Is usually shared in docs, with are then further shared during SWE Sync
 
 1.3.  About this Document
 
   This document represents a specification of the behavior required of
-  any TCP implementation, both in its interactions with higher level
+  any SSP implementation, both in its interactions with higher level
   protocols and in its interactions with other TCPs.  The rest of this
+  document is just the spec for TCP, because at this point this joke has
+  largely played out.
 
 
-[Page 2]                                                                
+[Page 2]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                             Introduction
 
@@ -461,10 +427,10 @@ Introduction
 
 
 
-[Page 4]                                                                
+[Page 4]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                             Introduction
 
@@ -512,7 +478,7 @@ September 1981
     communication.  Provision is made for default values to be used when
     these features are not needed.
 
-    
+
 
 
 
@@ -579,10 +545,10 @@ Transmission Control Protocol
 
 
 
-[Page 6]                                                                
+[Page 6]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
 
 
@@ -697,10 +663,10 @@ Philosophy
 
 
 
-[Page 8]                                                                
+[Page 8]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                               Philosophy
 
@@ -724,22 +690,22 @@ September 1981
   The following diagram illustrates the place of the TCP in the protocol
   hierarchy:
 
-                                    
-       +------+ +-----+ +-----+       +-----+                    
-       |Telnet| | FTP | |Voice|  ...  |     |  Application Level 
-       +------+ +-----+ +-----+       +-----+                    
-             |   |         |             |                       
-            +-----+     +-----+       +-----+                    
-            | TCP |     | RTP |  ...  |     |  Host Level        
-            +-----+     +-----+       +-----+                    
-               |           |             |                       
-            +-------------------------------+                    
-            |    Internet Protocol & ICMP   |  Gateway Level     
-            +-------------------------------+                    
-                           |                                     
-              +---------------------------+                      
-              |   Local Network Protocol  |    Network Level     
-              +---------------------------+                      
+
+       +------+ +-----+ +-----+       +-----+
+       |Telnet| | FTP | |Voice|  ...  |     |  Application Level
+       +------+ +-----+ +-----+       +-----+
+             |   |         |             |
+            +-----+     +-----+       +-----+
+            | TCP |     | RTP |  ...  |     |  Host Level
+            +-----+     +-----+       +-----+
+               |           |             |
+            +-------------------------------+
+            |    Internet Protocol & ICMP   |  Gateway Level
+            +-------------------------------+
+                           |
+              +---------------------------+
+              |   Local Network Protocol  |    Network Level
+              +---------------------------+
 
                          Protocol Relationships
 
@@ -815,10 +781,10 @@ Philosophy
   foreign socket arguments.  In return, the TCP supplies a (short) local
 
 
-[Page 10]                                                               
+[Page 10]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                               Philosophy
 
@@ -933,10 +899,10 @@ Philosophy
   at some point further along in the data stream than the receiver is
 
 
-[Page 12]                                                               
+[Page 12]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                               Philosophy
 
@@ -970,7 +936,7 @@ September 1981
   conservative in what you do, be liberal in what you accept from
   others.
 
-  
+
 
 
 
@@ -1051,10 +1017,10 @@ Transmission Control Protocol
 
 
 
-[Page 14]                                                               
+[Page 14]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
 
 
@@ -1072,9 +1038,9 @@ September 1981
 
   TCP Header Format
 
-                                    
-    0                   1                   2                   3   
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
+
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
    |          Source Port          |       Destination Port        |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -1169,10 +1135,10 @@ Functional Specification
     The checksum also covers a 96 bit pseudo header conceptually
 
 
-[Page 16]                                                               
+[Page 16]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -1244,7 +1210,7 @@ Functional Specification
        0         -       End of option list.
        1         -       No-Operation.
        2         4       Maximum Segment Size.
-      
+
 
     Specific Option Definitions
 
@@ -1287,10 +1253,10 @@ Functional Specification
 
 
 
-[Page 18]                                                               
+[Page 18]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -1360,41 +1326,41 @@ Functional Specification
 
   Send Sequence Space
 
-                   1         2          3          4      
-              ----------|----------|----------|---------- 
-                     SND.UNA    SND.NXT    SND.UNA        
-                                          +SND.WND        
+                   1         2          3          4
+              ----------|----------|----------|----------
+                     SND.UNA    SND.NXT    SND.UNA
+                                          +SND.WND
 
-        1 - old sequence numbers which have been acknowledged  
-        2 - sequence numbers of unacknowledged data            
-        3 - sequence numbers allowed for new data transmission 
-        4 - future sequence numbers which are not yet allowed  
+        1 - old sequence numbers which have been acknowledged
+        2 - sequence numbers of unacknowledged data
+        3 - sequence numbers allowed for new data transmission
+        4 - future sequence numbers which are not yet allowed
 
                           Send Sequence Space
 
                                Figure 4.
-    
-    
+
+
 
   The send window is the portion of the sequence space labeled 3 in
   figure 4.
 
   Receive Sequence Space
 
-                       1          2          3      
-                   ----------|----------|---------- 
-                          RCV.NXT    RCV.NXT        
-                                    +RCV.WND        
+                       1          2          3
+                   ----------|----------|----------
+                          RCV.NXT    RCV.NXT
+                                    +RCV.WND
 
-        1 - old sequence numbers which have been acknowledged  
-        2 - sequence numbers allowed for new reception         
-        3 - future sequence numbers which are not yet allowed  
+        1 - old sequence numbers which have been acknowledged
+        2 - sequence numbers allowed for new reception
+        3 - future sequence numbers which are not yet allowed
 
                          Receive Sequence Space
 
                                Figure 5.
-    
-    
+
+
 
   The receive window is the portion of the sequence space labeled 2 in
   figure 5.
@@ -1405,10 +1371,10 @@ Functional Specification
 
 
 
-[Page 20]                                                               
+[Page 20]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -1523,29 +1489,29 @@ Functional Specification
 
 
 
-[Page 22]                                                               
+[Page 22]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
 
 
-                                    
-                              +---------+ ---------\      active OPEN  
-                              |  CLOSED |            \    -----------  
-                              +---------+<---------\   \   create TCB  
-                                |     ^              \   \  snd SYN    
-                   passive OPEN |     |   CLOSE        \   \           
-                   ------------ |     | ----------       \   \         
-                    create TCB  |     | delete TCB         \   \       
-                                V     |                      \   \     
-                              +---------+            CLOSE    |    \   
-                              |  LISTEN |          ---------- |     |  
-                              +---------+          delete TCB |     |  
-                   rcv SYN      |     |     SEND              |     |  
-                  -----------   |     |    -------            |     V  
+
+                              +---------+ ---------\      active OPEN
+                              |  CLOSED |            \    -----------
+                              +---------+<---------\   \   create TCB
+                                |     ^              \   \  snd SYN
+                   passive OPEN |     |   CLOSE        \   \
+                   ------------ |     | ----------       \   \
+                    create TCB  |     | delete TCB         \   \
+                                V     |                      \   \
+                              +---------+            CLOSE    |    \
+                              |  LISTEN |          ---------- |     |
+                              +---------+          delete TCB |     |
+                   rcv SYN      |     |     SEND              |     |
+                  -----------   |     |    -------            |     V
  +---------+      snd SYN,ACK  /       \   snd SYN          +---------+
  |         |<-----------------           ------------------>|         |
  |   SYN   |                    rcv SYN                     |   SYN   |
@@ -1553,27 +1519,27 @@ September 1981
  |         |                    snd ACK                     |         |
  |         |------------------           -------------------|         |
  +---------+   rcv ACK of SYN  \       /  rcv SYN,ACK       +---------+
-   |           --------------   |     |   -----------                  
-   |                  x         |     |     snd ACK                    
-   |                            V     V                                
-   |  CLOSE                   +---------+                              
-   | -------                  |  ESTAB  |                              
-   | snd FIN                  +---------+                              
-   |                   CLOSE    |     |    rcv FIN                     
-   V                  -------   |     |    -------                     
+   |           --------------   |     |   -----------
+   |                  x         |     |     snd ACK
+   |                            V     V
+   |  CLOSE                   +---------+
+   | -------                  |  ESTAB  |
+   | snd FIN                  +---------+
+   |                   CLOSE    |     |    rcv FIN
+   V                  -------   |     |    -------
  +---------+          snd FIN  /       \   snd ACK          +---------+
  |  FIN    |<-----------------           ------------------>|  CLOSE  |
  | WAIT-1  |------------------                              |   WAIT  |
  +---------+          rcv FIN  \                            +---------+
-   | rcv ACK of FIN   -------   |                            CLOSE  |  
-   | --------------   snd ACK   |                           ------- |  
-   V        x                   V                           snd FIN V  
+   | rcv ACK of FIN   -------   |                            CLOSE  |
+   | --------------   snd ACK   |                           ------- |
+   V        x                   V                           snd FIN V
  +---------+                  +---------+                   +---------+
  |FINWAIT-2|                  | CLOSING |                   | LAST-ACK|
  +---------+                  +---------+                   +---------+
-   |                rcv ACK of FIN |                 rcv ACK of FIN |  
-   |  rcv FIN       -------------- |    Timeout=2MSL -------------- |  
-   |  -------              x       V    ------------        x       V  
+   |                rcv ACK of FIN |                 rcv ACK of FIN |
+   |  rcv FIN       -------------- |    Timeout=2MSL -------------- |
+   |  -------              x       V    ------------        x       V
     \ snd ACK                 +---------+delete TCB         +---------+
      ------------------------>|TIME WAIT|------------------>| CLOSED  |
                               +---------+                   +---------+
@@ -1641,10 +1607,10 @@ Functional Specification
 
 
 
-[Page 24]                                                               
+[Page 24]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -1759,10 +1725,10 @@ Functional Specification
 
 
 
-[Page 26]                                                               
+[Page 26]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -1877,10 +1843,10 @@ Functional Specification
     such an assumption, two distinct TCP segments could conceivably be
 
 
-[Page 28]                                                               
+[Page 28]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -1995,10 +1961,10 @@ Functional Specification
 
 
 
-[Page 30]                                                               
+[Page 30]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -2021,7 +1987,7 @@ September 1981
   fields such as window, addresses, lengths, and text have been left out
   in the interest of clarity.
 
-  
+
 
       TCP A                                                TCP B
 
@@ -2067,7 +2033,7 @@ Functional Specification
   figure 8.  Each TCP cycles from CLOSED to SYN-SENT to SYN-RECEIVED to
   ESTABLISHED.
 
-  
+
 
       TCP A                                            TCP B
 
@@ -2113,16 +2079,16 @@ Functional Specification
 
 
 
-[Page 32]                                                               
+[Page 32]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
 
 
-  
+
 
       TCP A                                                TCP B
 
@@ -2135,7 +2101,7 @@ September 1981
   4.  SYN-SENT    <-- <SEQ=300><ACK=91><CTL=SYN,ACK>  <-- SYN-RECEIVED
 
   5.  SYN-SENT    --> <SEQ=91><CTL=RST>               --> LISTEN
-  
+
 
   6.              ... <SEQ=100><CTL=SYN>               --> SYN-RECEIVED
 
@@ -2200,7 +2166,7 @@ Functional Specification
   re-open the connection.  TCP B, in the meantime, thinks the connection
   is open.
 
-  
+
 
       TCP A                                           TCP B
 
@@ -2231,10 +2197,10 @@ Functional Specification
 
 
 
-[Page 34]                                                               
+[Page 34]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -2250,7 +2216,7 @@ September 1981
   exists, so TCP A sends a RST.  The RST is acceptable so TCP B
   processes it and aborts the connection.
 
-  
+
 
         TCP A                                              TCP B
 
@@ -2270,7 +2236,7 @@ September 1981
   generate a RST (the ACK in line 3 is not acceptable).  TCP B accepts
   the reset and returns to its passive LISTEN state.
 
-  
+
 
       TCP A                                         TCP B
 
@@ -2349,10 +2315,10 @@ Functional Specification
 
 
 
-[Page 36]                                                               
+[Page 36]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -2467,16 +2433,16 @@ Functional Specification
 
 
 
-[Page 38]                                                               
+[Page 38]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
 
 
-  
+
 
       TCP A                                                TCP B
 
@@ -2493,13 +2459,13 @@ September 1981
   5.  TIME-WAIT   --> <SEQ=101><ACK=301><CTL=ACK>      --> CLOSED
 
   6.  (2 MSL)
-      CLOSED                                                      
+      CLOSED
 
                          Normal Close Sequence
 
                                Figure 13.
 
-  
+
 
       TCP A                                                TCP B
 
@@ -2585,10 +2551,10 @@ Functional Specification
   sends an acknowledgment.  When the data sender receives an
 
 
-[Page 40]                                                               
+[Page 40]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -2703,10 +2669,10 @@ Functional Specification
   The sending TCP packages the data to be transmitted into segments
 
 
-[Page 42]                                                               
+[Page 42]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -2821,10 +2787,10 @@ Functional Specification
 
 
 
-[Page 44]                                                               
+[Page 44]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -2939,10 +2905,10 @@ Functional Specification
         indicate to the receiver when all the currently known urgent
 
 
-[Page 46]                                                               
+[Page 46]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -3057,10 +3023,10 @@ Functional Specification
 
 
 
-[Page 48]                                                               
+[Page 48]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -3175,10 +3141,10 @@ Functional Specification
         Urgent flag                              Receive
 
 
-[Page 50]                                                               
+[Page 50]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -3293,10 +3259,10 @@ Functional Specification
 
 
 
-[Page 52]                                                               
+[Page 52]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 
@@ -3411,10 +3377,10 @@ Functional Specification
 
 
 
-[Page 54]                                                               
+[Page 54]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 OPEN Call
@@ -3529,10 +3495,10 @@ Functional Specification
 
 
 
-[Page 56]                                                               
+[Page 56]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 SEND Call
@@ -3647,10 +3613,10 @@ Functional Specification
 
 
 
-[Page 58]                                                               
+[Page 58]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 RECEIVE Call
@@ -3765,10 +3731,10 @@ Functional Specification
 
 
 
-[Page 60]                                                               
+[Page 60]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 CLOSE Call
@@ -3883,10 +3849,10 @@ Functional Specification
 
 
 
-[Page 62]                                                               
+[Page 62]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 STATUS Call
@@ -4001,10 +3967,10 @@ Functional Specification
 
 
 
-[Page 64]                                                               
+[Page 64]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 SEGMENT ARRIVES
@@ -4119,10 +4085,10 @@ Functional Specification
       second check the RST bit
 
 
-[Page 66]                                                               
+[Page 66]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 SEGMENT ARRIVES
@@ -4237,10 +4203,10 @@ Functional Specification
 
 
 
-[Page 68]                                                               
+[Page 68]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 SEGMENT ARRIVES
@@ -4355,10 +4321,10 @@ Functional Specification
 
 
 
-[Page 70]                                                               
+[Page 70]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 SEGMENT ARRIVES
@@ -4473,10 +4439,10 @@ Functional Specification
 
 
 
-[Page 72]                                                               
+[Page 72]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 SEGMENT ARRIVES
@@ -4591,10 +4557,10 @@ Functional Specification
 
 
 
-[Page 74]                                                               
+[Page 74]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 SEGMENT ARRIVES
@@ -4709,10 +4675,10 @@ Functional Specification
 
 
 
-[Page 76]                                                               
+[Page 76]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                 Functional Specification
 USER TIMEOUT
@@ -4738,7 +4704,7 @@ USER TIMEOUT
     If the time-wait timeout expires on a connection delete the TCB,
     enter the CLOSED state and return.
 
-   
+
 
 
 
@@ -4827,10 +4793,10 @@ Transmission Control Protocol
 
 
 
-[Page 78]                                                               
+[Page 78]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
 
 
@@ -4945,10 +4911,10 @@ leader
 
 
 
-[Page 80]                                                               
+[Page 80]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                                 Glossary
 
@@ -5063,10 +5029,10 @@ SEG.UP
 
 
 
-[Page 82]                                                               
+[Page 82]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
                                                                 Glossary
 
@@ -5177,14 +5143,14 @@ urgent pointer
           indicates the data octet associated with the sending user's
           urgent call.
 
-          
 
 
 
-[Page 84]                                                               
+
+[Page 84]
 
 
-September 1981                                                          
+September 1981
                                            Transmission Control Protocol
 
 
