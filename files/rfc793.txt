@@ -253,7 +253,7 @@ interface to programs or users that require its services.
 
 1.1.  Motivation
 
-  Hopefully you will obtain more of it from SWE Sync
+  SWE Sync is as a great well where even more motivation can be obtained
 
 
                                                                 [Page 1]
